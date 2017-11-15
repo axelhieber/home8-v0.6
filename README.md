@@ -16,6 +16,7 @@ Parts
 
 Tested Linux Boards
   NanoPi Neo
+  NanoPi
   NanoPi Air
 
 
