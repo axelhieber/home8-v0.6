@@ -1,3 +1,3 @@
 # home8-v0.6
 
-for license - please ask
+for license - please ask - not decided yet
