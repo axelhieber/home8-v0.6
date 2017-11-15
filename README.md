@@ -1,5 +1,7 @@
-# home8-v0.6
 
+
+# home8-v0.6
+<pre>
 the Home8 is a Microchip MCU based SmartHome controler.
 
 If you want to connect two deviced together or want to use OpenHub etc... a Linux board of some kind is needed. (eg NanoPI NEO)
@@ -23,3 +25,4 @@ Is it stable?
 
 
 for license - please ask - not decided yet
+<pre>
