@@ -1,0 +1,119 @@
+Version 3.2 HI-TECH Software Intermediate Code
+[; ;__size_t.h: 4: typedef unsigned size_t;
+[; ;time.h: 8: typedef long time_t;
+[; ;time.h: 9: struct tm {
+[; ;time.h: 10: int tm_sec;
+[; ;time.h: 11: int tm_min;
+[; ;time.h: 12: int tm_hour;
+[; ;time.h: 13: int tm_mday;
+[; ;time.h: 14: int tm_mon;
+[; ;time.h: 15: int tm_year;
+[; ;time.h: 16: int tm_wday;
+[; ;time.h: 17: int tm_yday;
+[; ;time.h: 18: int tm_isdst;
+[; ;time.h: 19: };
+[; ;time.h: 25: extern int time_zone;
+[; ;time.h: 30: extern time_t time(time_t *);
+[; ;time.h: 31: extern int stime(time_t *);
+[; ;time.h: 47: extern char * asctime(const struct tm *) ;
+[; ;time.h: 48: extern char * ctime(const time_t *) ;
+[; ;time.h: 49: extern struct tm * gmtime(const time_t *) ;
+[; ;time.h: 50: extern struct tm * localtime(const time_t *) ;
+[; ;time.h: 51: extern size_t strftime(char *, size_t, const char *, const struct tm *) ;
+[; ;time.h: 52: extern time_t mktime(struct tm *);
+[; ;stdint.h: 13: typedef signed char int8_t;
+[; ;stdint.h: 20: typedef signed int int16_t;
+[; ;stdint.h: 28: typedef signed short long int int24_t;
+[; ;stdint.h: 36: typedef signed long int int32_t;
+[; ;stdint.h: 43: typedef unsigned char uint8_t;
+[; ;stdint.h: 49: typedef unsigned int uint16_t;
+[; ;stdint.h: 56: typedef unsigned short long int uint24_t;
+[; ;stdint.h: 63: typedef unsigned long int uint32_t;
+[; ;stdint.h: 71: typedef signed char int_least8_t;
+[; ;stdint.h: 78: typedef signed int int_least16_t;
+[; ;stdint.h: 90: typedef signed short long int int_least24_t;
+[; ;stdint.h: 98: typedef signed long int int_least32_t;
+[; ;stdint.h: 105: typedef unsigned char uint_least8_t;
+[; ;stdint.h: 111: typedef unsigned int uint_least16_t;
+[; ;stdint.h: 121: typedef unsigned short long int uint_least24_t;
+[; ;stdint.h: 128: typedef unsigned long int uint_least32_t;
+[; ;stdint.h: 137: typedef signed char int_fast8_t;
+[; ;stdint.h: 144: typedef signed int int_fast16_t;
+[; ;stdint.h: 156: typedef signed short long int int_fast24_t;
+[; ;stdint.h: 164: typedef signed long int int_fast32_t;
+[; ;stdint.h: 171: typedef unsigned char uint_fast8_t;
+[; ;stdint.h: 177: typedef unsigned int uint_fast16_t;
+[; ;stdint.h: 187: typedef unsigned short long int uint_fast24_t;
+[; ;stdint.h: 194: typedef unsigned long int uint_fast32_t;
+[; ;stdint.h: 200: typedef int32_t intmax_t;
+[; ;stdint.h: 205: typedef uint32_t uintmax_t;
+[; ;stdint.h: 210: typedef int16_t intptr_t;
+[; ;stdint.h: 215: typedef uint16_t uintptr_t;
+"4 timeStemp.c
+[v _timestamp `ul ~T0 @X0 1 s ]
+[i _timestamp
+-> -> -> 0 `i `l `ul
+]
+[; ;timeStemp.c: 4: static uint32_t timestamp =0;
+"6
+[v _time_isr `(v ~T0 @X0 1 ef ]
+"7
+{
+[; ;timeStemp.c: 6: void time_isr(void)
+[; ;timeStemp.c: 7: {
+[e :U _time_isr ]
+[f ]
+[; ;timeStemp.c: 8: timestamp++;
+"8
+[e ++ _timestamp -> -> -> 1 `i `l `ul ]
+[; ;timeStemp.c: 9: }
+"9
+[e :UE 2 ]
+}
+"11
+[v _getTimeStemp `(ul ~T0 @X0 1 ef ]
+"12
+{
+[; ;timeStemp.c: 11: uint32_t getTimeStemp(void)
+[; ;timeStemp.c: 12: {
+[e :U _getTimeStemp ]
+[f ]
+[; ;timeStemp.c: 13: return timestamp;
+"13
+[e ) _timestamp ]
+[e $UE 3  ]
+[; ;timeStemp.c: 14: }
+"14
+[e :UE 3 ]
+}
+"16
+[v _setTimeStemp `(v ~T0 @X0 1 ef1`ul ]
+"17
+{
+[; ;timeStemp.c: 16: void setTimeStemp(uint32_t time)
+[; ;timeStemp.c: 17: {
+[e :U _setTimeStemp ]
+[v _time `ul ~T0 @X0 1 r1 ]
+[f ]
+[; ;timeStemp.c: 18: timestamp=time;
+"18
+[e = _timestamp _time ]
+[; ;timeStemp.c: 19: }
+"19
+[e :UE 4 ]
+}
+"21
+[v _timeInit `(v ~T0 @X0 1 ef ]
+"22
+{
+[; ;timeStemp.c: 21: void timeInit(void)
+[; ;timeStemp.c: 22: {
+[e :U _timeInit ]
+[f ]
+[; ;timeStemp.c: 23: timestamp=1502383929;
+"23
+[e = _timestamp -> -> 1502383929 `l `ul ]
+[; ;timeStemp.c: 24: }
+"24
+[e :UE 5 ]
+}
