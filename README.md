@@ -21,9 +21,11 @@ Tested Linux Boards
 
 
 Is it stable?
-  The the MCU firmwar is stable
+  The the MCU firmware is stable
   The Linux-Mqtt software is NOT stable at the Moment.
 
 
-for license - please ask - not decided yet
+license
+  for external code/resources - please look it up your self (eclipse paho etc... )
+  for my code please ask me - not decided yet (will be marked on top of every file)
 <pre>
