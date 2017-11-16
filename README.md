@@ -25,7 +25,7 @@ Is it stable?
   The Linux-Mqtt software is NOT stable at the Moment.
 
 
-for license - 
+license
   for external code/resources - please look it up your self (eclipse paho etc... )
   for my code please ask me - not decided yet (will be marked on top of every file)
 <pre>
