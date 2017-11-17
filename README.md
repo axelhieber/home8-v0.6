@@ -31,7 +31,7 @@ Whats Next:
   Simple RGBW-LED Controler-Board software is already in beta.
   Simple Temp. Senor for 
   
-I will upload the code, when if figured out the licensing and when the code is presentable.
+I will upload the code, when I have figured out the licensing(external Sources) and when the code is presentable.
 
 license
   for external code/resources - please look it up your self (eclipse paho etc... )
