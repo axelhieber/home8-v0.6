@@ -1,6 +1,3 @@
-[submodule "firmware/scr/paho"]
-	path = firmware/scr/paho
-	url = git://github.com/eclipse/paho.mqtt.c.git
 [submodule "software/scr/paho"]
 	path = software/scr/paho
 	url = git://github.com/eclipse/paho.mqtt.c.git
