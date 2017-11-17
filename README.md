@@ -15,15 +15,23 @@ Parts
 
 
 Tested Linux Boards
-  NanoPi Neo
-  NanoPi Due
-  NanoPi Air
+  NanoPi Neo (LAN)
+  NanoPi Due (WLAN)
+  NanoPi Air (WLAN)
+  (esp8266 in testing)(WLAN)
 
 
 Is it stable?
-  The the MCU firmware is stable
+  The the MCU firmware is very stable, but not perfect!
   The Linux-Mqtt software is NOT stable at the Moment.
-
+  The ESP8266-Mqtt software is still in development.
+  
+Whats Next:
+  UART-Bootloader for OTA Updates oft the MCU firmware.
+  Simple RGBW-LED Controler-Board software is already in beta.
+  Simple Temp. Senor for 
+  
+I will upload the code, when if figured out the licensing and when the code is presentable.
 
 license
   for external code/resources - please look it up your self (eclipse paho etc... )
